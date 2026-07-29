@@ -3,7 +3,7 @@ import streamlit as st
 import pandas as pd
 
 ## Load the trained model and the list of features it expects
-model = joblib.load("laptop_price_model.pkl")
+model = joblib.load("model_features.pkl")
 feature_names = list(model.feature_names_in_)
 
 ## App title and short description
