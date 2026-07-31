@@ -1,0 +1,8 @@
+[theme]
+# Dark theme to match the app's styling (prevents a light-theme flash on load).
+base = "dark"
+primaryColor = "#f5a623"
+backgroundColor = "#0e1117"
+secondaryBackgroundColor = "#161b26"
+textColor = "#e8eaed"
+font = "sans serif"
