@@ -189,16 +189,16 @@ if not predict_clicked and not st.session_state.history:
           <div style="color:#c7ccd6; font-size:15px; line-height:1.6;">
             This tool estimates a laptop's resale price in Singapore dollars from its
             specifications, helping online sellers and small retailers price stock
-            consistently instead of guessing.
+            consistently instead of guessing
           </div>
           <div style="font-size:15px; font-weight:700; color:#e8eaed; margin:18px 0 6px;">
             How to use it
           </div>
           <div style="color:#c7ccd6; font-size:15px; line-height:1.8;">
-            1. Enter the laptop's specifications in the sidebar on the left.<br>
-            2. Click <b>Estimate price</b>.<br>
-            3. Review the estimated price, the suggested pricing range, and the charts
-            showing how each spec affects the price.
+            1. Enter the laptop's specifications in the sidebar on the left<br>
+            2. Click <b>Estimate price</b><br>
+            3. Review the estimated price, the suggested pricing range and the charts
+            showing how each spec affects the price
           </div>
         </div>
         """,
@@ -210,9 +210,9 @@ if not predict_clicked and not st.session_state.history:
     a, b, c = st.columns(3)
     for col, (icon_label, desc) in zip(
         [a, b, c],
-        [("Instant estimate", "A price prediction in SGD based on the specs you enter."),
-         ("Pricing range", "A lower-to-upper band so you know how much to trust the estimate."),
-         ("Spec insights", "Charts showing which specs drive the price the most.")],
+        [("Instant estimate", "A price prediction in SGD based on the specs you enter"),
+         ("Pricing range", "A lower-to-upper band so you know how much to trust the estimate"),
+         ("Spec insights", "Charts showing which specs drive the price the most")],
     ):
         col.markdown(
             f'<div style="background:#12161f; border:1px solid #232a36; border-radius:14px;'
