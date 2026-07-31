@@ -44,10 +44,15 @@ st.markdown(
     section[data-testid="stSidebar"] .stSlider { margin-bottom: 0.4rem; }
 
     .stButton > button {
-        background: linear-gradient(90deg,#f5a623,#f7b955); color:#1a1a1a !important;
-        border:none; border-radius:10px; padding:0.65rem 1rem; font-weight:700;
+        background: linear-gradient(90deg,#f5a623,#f7b955);
+        color:#111111 !important;
+        border:none; border-radius:10px; padding:0.65rem 1rem; font-weight:800;
         transition: filter .2s ease, transform .05s ease;
     }
+    /* Force the label text inside the button to stay black too */
+    .stButton > button p,
+    .stButton > button span,
+    .stButton > button div { color:#111111 !important; }
     .stButton > button:hover { filter:brightness(1.05); }
     .stButton > button:active { transform: scale(0.99); }
 

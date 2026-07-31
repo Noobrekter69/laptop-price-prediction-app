@@ -1,5 +1,5 @@
 [theme]
-# Dark theme to match the app's styling (prevents a light-theme flash on load).
+# Dark theme with a GOLD accent (this recolours sliders, checkboxes, etc.)
 base = "dark"
 primaryColor = "#f5a623"
 backgroundColor = "#0e1117"
