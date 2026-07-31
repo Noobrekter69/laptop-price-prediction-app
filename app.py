@@ -5,10 +5,10 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-## ---- Page config ----
+## page config
 st.set_page_config(page_title="Laptop Price Estimator", page_icon="💻", layout="wide")
 
-## ---- Shared matplotlib style for the dark theme ----
+## shared matplotlib style for the dark theme
 ACCENT = "#f5a623"
 TEXT = "#e8eaed"
 GRID = "#2a2f3a"
@@ -25,7 +25,7 @@ def style_ax(ax, title=None, xlabel=None, ylabel=None):
     for s in ["bottom", "left"]:
         ax.spines[s].set_color("#555")
 
-## ---- CSS: spacing, readable text, styled components ----
+## CSS: spacing, readable text, styled components
 st.markdown(
     """
     <style>
@@ -65,7 +65,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-## ---- Load model ----
+## loading model
 @st.cache_resource
 def load_model():
     return joblib.load("laptop_price_model.pkl")
@@ -132,7 +132,7 @@ def laptop_animation_html(price_text: str) -> str:
     """
 
 
-## ================== SIDEBAR ==================
+## side bar
 with st.sidebar:
     st.header("Laptop specifications")
     company = st.selectbox("Brand", ['Dell','HP','Lenovo','Asus','Acer','MSI','Toshiba','Razer','Apple','Other'])
@@ -160,7 +160,7 @@ with st.sidebar:
     predict_clicked = st.button("Estimate price", type="primary", use_container_width=True)
 
 
-## ================== MAIN ==================
+## main
 st.title("Laptop Price Estimator")
 st.caption("Specification-based price estimates in SGD, for online sellers and small retailers.")
 st.write("")  # spacer
@@ -189,7 +189,7 @@ if predict_clicked:
         price_text = f"S${price:,.2f}"
         lo, hi = max(0, price - 287), price + 287
 
-        ## --- Top row: animation + KPI cards, with a gap column between them ---
+        ## top row: animation and KPI cards with a gap column between them
         c1, gap, c2 = st.columns([1.1, 0.15, 1])
         with c1:
             components.html(laptop_animation_html(price_text), height=280)
@@ -211,7 +211,7 @@ if predict_clicked:
         st.divider()
         st.write("")
 
-        ## --- Tabbed graphs (no emojis) ---
+        ## tabbed graphs
         t1, t2, t3 = st.tabs(["Price vs specs", "What drives this price", "Pricing range"])
 
         with t1:
@@ -277,7 +277,7 @@ if predict_clicked:
         })
 
 
-## ---- History ----
+## history
 if st.session_state.history:
     st.write("")
     st.divider()
